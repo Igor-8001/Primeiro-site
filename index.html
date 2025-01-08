@@ -116,10 +116,10 @@
         </section>
     </main>
     <script>
-        let nome = ""; // Variável global para armazenar o nome
+        let nome = window.prompt('Coloque seu nome');
 
         function inicio() {
-            let nome = window.prompt('Coloque seu nome');
+            
             let cpf = window.prompt('Coloque seu CPF');
             window.alert(`Olá, ${nome}! É um prazer te conhecer!`);
             window.alert(`Então ${nome}, eu fiz esse site com um botão escondido. Se você achar, irá se surpreender!`);
