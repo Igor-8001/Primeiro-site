@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro eitcha</title>
+    <link rel="shortcut icon" href="fotos/favicon.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(46, 46, 46, 0.877);
+            color: purple;
+        }
+        h1 {
+            border: 10px solid purple;
+            padding: 10px 20px;
+            margin: 0 auto;
+            width: fit-content;
+            color: white;
+            box-shadow: 0 0 0 15px rgb(83, 1, 83);
+            background-color: black;
+            text-shadow: #000000 2px 2px 0px;
+        }
+        h2, h3, h4, h5 {
+            color: white;
+            text-shadow: #000000 2px 2px 0px;
+        }
+        p {
+            color: white;
+            text-shadow: #000000 2px 2px 0px;
+        }
+        header {
+            background-color: #000000;
+            padding: 20px;
+            border-bottom: 5px solid purple;
+            text-align: center;
+            box-shadow: #530153 7px 5px 4px;
+            position: relative;
+        }
+        main {
+            background-color: #000000;
+            padding: 20px;
+            width: fit-content;
+            border-bottom: 5px solid purple;
+            text-align: left;
+            box-shadow: #530153 7px 5px 4px;
+            flex: 1;
+        }
+        section {
+            background-color: #1f1d29;
+            width: fit-content;
+            border: 13px solid #530153;
+            padding: 20px;
+        }
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-top: 5px solid purple;
+            box-shadow: 0px -2px 4px #530153;
+        }
+        button.cadastra-se {
+            padding: 5px 10px;
+            font-size: 14px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #530153;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: #000 2px 2px 0px;
+        }
+        button.cadastra-se:hover {
+            background-color: #8400ff;
+        }
+        #botaoInvisivel {
+            display: none; /* Botão começa invisível */
+            padding: 10px 20px;
+            background-color: #530153;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Espaçamento para ficar abaixo do texto */
+        }
+        #botaoInvisivel:hover {
+            background-color: #8400ff;
+        }
+    </style>
+</head>
+<body>
+    <script>window.alert('Seja bem vindo, obrigado por comparecer ao meu portfólio')</script>  
+    <header>
+        <h1>Tudo sobre minha pessoa</h1>
+        <button class="cadastra-se" onclick="inicio()">Cadastra-se</button>
+    </header>
+    <main>
+        <h2>Capítulo 1.0</h2>
+        <section>
+            <h3>Apenas um futuro programador de frontend</h3>
+            <p>
+                Olá a todos, meu nome é Igor tenho 18 anos <br>
+                Estou iniciando nesse ramo de programação pretendo iniciar com <abbr title="JavaScript">JS</abbr><br>
+                Apenas sei fazer o básico em HTML, CSS e JS, sei fazer contas, tudo o básico.
+            </p>
+            <!-- Botão invisível -->
+            <button id="botaoInvisivel" onclick="mostrarMensagem()">ops!</button>
+        </section>
+    </main>
+    <script>
+        let nome = ""; // Variável global para armazenar o nome
+
+        function inicio() {
+            let nome = window.prompt('Coloque seu nome');
+            let cpf = window.prompt('Coloque seu CPF');
+            window.alert(`Olá, ${nome}! É um prazer te conhecer!`);
+            window.alert(`Então ${nome}, eu fiz esse site com um botão escondido. Se você achar, irá se surpreender!`);
+            window.alert(`Você tem cerca de 5 minutos para encontrar o botão, pois após isso iremos fazer uma compra no seu CPF: ${cpf}`);
+        }
+
+        // Tornar o botão invisível clicável
+        document.querySelector('p').addEventListener('click', function() {
+            const botao = document.getElementById('botaoInvisivel');
+            botao.style.display = 'block'; // Mostra o botão
+        });
+
+        // Função para exibir a mensagem ao clicar no botão
+        function mostrarMensagem() {
+            window.alert(`Surpresa! ${nome}, estava apenas brincando não vou usar seu cpf pra nada`);
+        }
+    </script>
+    <footer> 
+        <p>&copy; 2025 <a href="https://github.com/Igor-8001" target="_blank">Igor</a> - Futuro Programador</p>
+    </footer>
+</body>
+</html>
